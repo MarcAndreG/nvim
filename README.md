@@ -1,12 +1,20 @@
-# nvim
-nvim config
+# My personnal nvim config
 
-## requirements
+## Requirements
+### Neovim
+```
+brew install neovim
+```
+### ripgrep
 ```
 brew install ripgrep
 ```
 ### Nerd font
-Install prefered font
 ```
 https://www.nerdfonts.com/
+```
+
+## Installation
+```
+git clone git@github.com:MarcAndreG/nvim.git ~/.config
 ```
