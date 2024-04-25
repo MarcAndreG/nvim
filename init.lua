@@ -20,12 +20,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+  {"navarasu/onedark.nvim"}
 }
 local opts = {}
 
@@ -44,6 +44,8 @@ config.setup({
   indent = { enable = true },  
 })
 
+require('onedark').setup {
+    style = 'dark'
+}
 
-require("catppuccin").setup()
-vim.cmd.colorscheme "catppuccin"
+require('onedark').load()
