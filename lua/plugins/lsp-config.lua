@@ -10,7 +10,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "eslint", "ruby_lsp"},
+        ensure_installed = { "lua_ls", "tsserver", "eslint", "solargraph" },
       })
     end,
   },
@@ -23,13 +23,13 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
-      lspconfig.tsserver.setup({
+        lspconfig.tsserver.setup({
         capabilities = capabilities
       })
-      lspconfig.eslint.setup({
+        lspconfig.eslint.setup({
         capabilities = capabilities
       })
-      lspconfig.ruby_lsp.setup({
+        lspconfig.solargraph.setup({
         capabilities = capabilities
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
